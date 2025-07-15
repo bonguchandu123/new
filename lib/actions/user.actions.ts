@@ -8,6 +8,8 @@ import Thread from "../models/thread.model";
 import User from "../models/user.model";
 
 import { connectToDB } from "../mongoose";
+import { auth } from "@clerk/nextjs";
+import Likes from "../models/likes.model";
 
 export async function fetchUser(userId: string) {
   try {
@@ -181,3 +183,56 @@ export async function getActivity(userId: string) {
     throw error;
   }
 }
+
+
+
+
+export const toggleLikeThread = async (threadId: string) => {
+  try {
+    await connectToDB();
+    const { userId } = auth();
+    if (!userId) throw new Error("Not logged in");
+
+    const user = await User.findOne({ id: userId });
+    if (!user) throw new Error("User not found");
+
+    const thread = await Thread.findById(threadId);
+    if (!thread) throw new Error("Thread not found");
+
+    // Check if already liked
+    const existingLike = await Likes.findOne({
+      userId: user._id,
+      threadId: thread._id,
+    });
+
+    if (existingLike) {
+      // Unlike: delete the like document
+      await Likes.findByIdAndDelete(existingLike._id);
+
+      thread.likes.pull(existingLike._id);
+      user.likes.pull(existingLike._id);
+
+      await thread.save();
+      await user.save();
+
+      return { liked: false };
+    } else {
+      // Like: create new like document
+      const newLike = await Likes.create({
+        userId: user._id,
+        threadId: thread._id,
+      });
+
+      thread.likes.push(newLike._id);
+      user.likes.push(newLike._id);
+
+      await thread.save();
+      await user.save();
+
+      return { liked: true };
+    }
+  } catch (error) {
+    console.error("Toggle Like Error:", error);
+    return { error: "Something went wrong." };
+  }
+};

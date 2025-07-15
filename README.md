@@ -2,7 +2,8 @@
 
 A modern full-stack application built with **Next.js** using **Server Actions**, **Clerk Authentication**, **UploadThing**, and **Tailwind CSS**. This project supports secure file uploads, user authentication, and a responsive UI powered by shadcn/ui components.
 
-![App Screenshot](./public/web.png)
+![Preview](https://raw.githubusercontent.com/bonguchandu123/new/main/public/web.png)
+
 
 ## 🌐 Live Demo
 

@@ -62,8 +62,9 @@ NEXT_CLERK_WEBHOOK_SECRET=
 
 
 ## 👤 Author
-Chandu
+
 🔗 [GitHub:](https://github.com/bonguchandu123)
+🔗 [Linkdin:](https://www.linkedin.com/in/bongu-chandu-a29a02322/)
 
 ## 📸 Preview
 The banner above gives a full view of the application on desktop.

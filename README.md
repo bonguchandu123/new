@@ -1,13 +1,20 @@
-# 🔐 Threads - Auth + Upload App
 
-A modern full-stack application built with **Next.js** using **Server Actions**, **Clerk Authentication**, **UploadThing**, and **Tailwind CSS**. This project supports secure file uploads, user authentication, and a responsive UI powered by shadcn/ui components.
 
-![Preview](https://raw.githubusercontent.com/bonguchandu123/new/main/public/web.png)
+# 🔐 Threads – Fullstack Upload + Auth App
 
+A fully responsive, fullstack web application built with modern technologies like **Next.js Server Actions**, **Clerk authentication**, **UploadThing file handling**, and **Tailwind CSS** with **shadcn/ui** components.
+
+<div align="center">
+  <a href="https://new-alpha-liard.vercel.app" target="_blank">
+    <img src="https://github.com/bonguchandu123/new/issues/1#issue-3231827797" alt="Project Preview" width="100%" />
+  </a>
+</div>
+
+---
 
 ## 🌐 Live Demo
 
-🔗 [Visit the Live Site](https://new-alpha-liard.vercel.app/)
+🔗 [Click here to view the live site](https://new-alpha-liard.vercel.app)
 
 ---
 
@@ -15,20 +22,19 @@ A modern full-stack application built with **Next.js** using **Server Actions**,
 
 - **Framework:** Next.js (App Router, Server Actions)
 - **Styling:** Tailwind CSS + shadcn/ui
-- **Auth:** Clerk
-- **File Uploads:** UploadThing
-- **Database:** MongoDB (via Mongoose)
+- **Authentication:** Clerk
+- **File Upload:** UploadThing
+- **Database:** MongoDB (with Mongoose)
 - **Deployment:** Vercel
 
 ---
 
 ## 🔒 Environment Variables
 
-This project uses environment variables for API keys, MongoDB connection, and Clerk configuration.
+This app requires the following environment variables.  
+⚠️ **Important:** Do **not** commit your `.env` file.
 
-⚠️ **Important:** Do **not** share your real `.env` values publicly.
-
-Instead, use the following `.env.example` format and provide only the variable **names** (not values):
+Create a `.env.local` file with this structure:
 
 ```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=

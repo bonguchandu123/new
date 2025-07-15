@@ -1,14 +1,16 @@
 
 
+
+
 # 🔐 Threads – Fullstack Upload + Auth App
 
 A fully responsive, fullstack web application built with modern technologies like **Next.js Server Actions**, **Clerk authentication**, **UploadThing file handling**, and **Tailwind CSS** with **shadcn/ui** components.
-
 <div align="center">
   <a href="https://new-alpha-liard.vercel.app" target="_blank">
-    <img src="https://github.com/bonguchandu123/new/issues/1#issue-3231827797" alt="Project Preview" width="100%" />
+    <img src="https://github.com/bonguchandu123/new/assets/127278740/8488ab2e-2ef3-4091-86c6-6dc2682c1880" alt="Project Preview" width="100%" />
   </a>
 </div>
+
 
 ---
 

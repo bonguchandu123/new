@@ -57,11 +57,14 @@ MONGODB_URL=
 UPLOADTHING_SECRET=
 NEXT_CLERK_WEBHOOK_SECRET=
 
+```
 
-👤 Author
+
+
+## 👤 Author
 Chandu
-GitHub: @bonguchandu123
+🔗 [GitHub:](https://github.com/bonguchandu123)
 
-📸 Preview
+## 📸 Preview
 The banner above gives a full view of the application on desktop.
 Explore the full experience 👉 new-alpha-liard.vercel.app
